@@ -6,7 +6,7 @@
   </head>
   <body>
     <!-- заголовки от h1 до h6 -->
-    <h1 style="color: blue; background-color: bisque; padding: 20px">Мой первый HTML документ</h1>
+    <h1 id="head-1" style="color: blue; background-color: bisque; padding: 20px">Мой первый HTML документ</h1>
 
     <p id="par-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. At libero laborum cupiditate perferendis voluptates architecto fugiat molestiae esse consectetur rem?</p>
     <h2>Мой первый HTML документ</h2>
@@ -18,18 +18,147 @@
     <!-- параграф, обычный текст -->
     <p>Мой первый HTML документ</p>
 
-    <h3>Галерея</h3>
-    <img src="images/tree.jpg" alt="Дерево" width="500" />
-    <img
-      src="https://images.unsplash.com/photo-1518796745738-41048802f99a?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2069"
-      alt="Кролик"
-      width="500"
-    />
-    <img src="https://www.pravilamag.ru/upload/img_cache/446/44601ae182f93e9a74042306ddb21a5c_ce_1010x673x0x357_cropped_666x444.jpg" alt="Большой кролик" width="500" />
+    <div id="gallery" class="gallery">
+      <h3>Галерея</h3>
+      <img src="images/tree.jpg" alt="Дерево" width="500" />
+      <img
+        src="https://images.unsplash.com/photo-1518796745738-41048802f99a?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2069"
+        alt="Кролик"
+        width="500"
+      />
+      <img src="https://www.pravilamag.ru/upload/img_cache/446/44601ae182f93e9a74042306ddb21a5c_ce_1010x673x0x357_cropped_666x444.jpg" alt="Большой кролик" width="500" />
+    </div>
 
     <hr />
     <a href="https://unsplash.com/" target="_blank">Ссылка на unsplash</a>
     <a href="test.html">Ссылка на test.html</a>
     <a href="Клиент-серверное взаимодействие и Front-end vs Back-end.pdf">Клиент-серверное взаимодействие</a>
+    <a href="https://www.google.ru/" target="_blank">
+      <img src="images/google.png" alt="картинка гугл" width="200" />
+    </a>
+
+    <table>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Knocky</td>
+        <td>Flor</td>
+        <td>Ella</td>
+        <td>Juan</td>
+      </tr>
+      <tr>
+        <td>Breed</td>
+        <td>Jack Russell</td>
+        <td>Poodle</td>
+        <td>Streetdog</td>
+        <td>Cocker Spaniel</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>16</td>
+        <td>9</td>
+        <td>10</td>
+        <td>5</td>
+      </tr>
+    </table>
+
+    <!-- ненумерованый список -->
+    <ul type="circle">
+      <li>Пермь</li>
+      <li>Самара</li>
+      <li>СПБ</li>
+      <li>Москва</li>
+      <li>Краснодар</li>
+    </ul>
+
+    <!-- нумерованный список -->
+    <ol type="I" reversed>
+      <li>Чай</li>
+      <li>Кофе</li>
+      <li>Молоко</li>
+      <li>Сок</li>
+      <li>Лимонад</li>
+    </ol>
+
+    <!-- users - контейнер для ВСЕХ пользователей -->
+    <div class="users">
+      <!-- user - контейнер для ОДНОГО пользователя  -->
+      <div class="user">
+        <img src="images/user-1.jpg" alt="Петр Сидоров" width="300" />
+        <h2>Имя: Петр. Фамилия: Сидоров</h2>
+        <p>Возраст: 11 лет</p>
+        <p>Город проживания: Пенза</p>
+        <h3>Хобби:</h3>
+        <ol>
+          <li>Гулять с собакой</li>
+          <li>Кататься на велосипеде</li>
+          <li>Собирать конструктор</li>
+          <li>Есть мороженое</li>
+        </ol>
+      </div>
+
+      <div class="user">
+        <img src="images/avatar.jpg" alt="Петр Сидоров" width="300" />
+        <h2>Имя: Иван. Фамилия: Иванов</h2>
+        <p>Возраст: 21 лет</p>
+        <p>Город проживания: Самара</p>
+        <h3>Хобби:</h3>
+        <ol>
+          <li>Спать</li>
+          <li>Гулять</li>
+          <li>Есть мороженое</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="header"></div>
+    <header></header>
+
+    <div class="nav"></div>
+    <nav></nav>
+
+    <button>Нажми меня</button>
+
+    <hr />
+    <h2>Форма регистрации</h2>
+    <form>
+      <div class="form-input">
+        <label for="firstName">Имя:</label>
+        <input type="text" name="firstName" id="firstName" size="50" />
+      </div>
+
+      <div class="form-input">
+        <label for="lastName">Фамилия:</label>
+        <input type="text" name="lastName" id="lastName" maxlength="20" placeholder="Введите фамилию" />
+      </div>
+
+      <div class="form-input">
+        <label for="login">Логин:</label>
+        <input type="text" name="login" id="login" placeholder="Только латинаца, не менее трех символов" size="40" required />
+      </div>
+
+      <div class="form-input">
+        <label for="email">Адрес электронной почты:</label>
+        <input type="email" name="email" id="email" />
+      </div>
+
+      <div class="form-input">
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" id="password" placeholder="Не менее восьми произвольных символов" size="40" />
+      </div>
+
+      <div class="form-input">
+        <label for="avatar">Аватар:</label>
+        <input type="file" name="avatar" id="avatar" />
+      </div>
+
+      <div class="form-input">
+        <label for="birth-date">Дата рождения:</label>
+        <input type="date" name="birth-date" id="birth-date" value="2023-10-19" />
+      </div>
+
+      <div class="form-input">
+        <input type="submit" value="Зарегистрироваться" />
+      </div>
+    </form>
   </body>
 </html>
