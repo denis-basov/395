@@ -1,0 +1,105 @@
+/* 1 задание */
+/* - задайте списку цвет текста и фона */
+/* - задайте элементам списка отличный от самого списка цвет текста и фона */
+
+/* 1 */
+/* .list {
+    color: gold;
+    background-color: brown;
+}
+
+.list-1 {
+    color: blue;
+    background-color: burlywood;
+} */
+
+/* 2 */
+/* стили для списка */
+/*
+ul {
+    color: brown;
+    background-color: rgb(166, 210, 249);
+}
+*/
+
+/* стили для элементов списка  */
+/*
+li {
+    color: blueviolet;
+    background-color: aquamarine;
+}*/
+
+/* 3 */
+/* ul {
+    color: blue;
+    background-color: chocolate;
+}
+
+.i1 {
+    color: #d34545;
+    background-color: aqua;
+} */
+
+/* 4 */
+/* .list {
+    color: azure;
+    background-color: aqua;
+}
+
+.lpart {
+    color: blueviolet;
+    background-color: azure;
+}
+
+.lpart2 {
+    color: grey;
+    background-color: khaki;
+} */
+
+/* 2 задание
+для элемента с классов class="par-1" укажите:
+- сплошную границу толщиной 4п произвольного цвета
+- радиус скругления 8п
+- внешний отступ свезху/снизу 20п остальные 50п
+- внутренний отступ 15п
+- максимальную ширину 400п
+*/
+/* 1 */
+/* .par-1 {
+    color: sienna;
+    background-color: antiquewhite;
+
+    border: 1px solid plum;
+    border-radius: 8px;
+    margin: 20px 50px;
+    padding: 15px;
+    max-width: 400px;
+} */
+
+/* 2 */
+/* .par-1 {
+    border: solid 4px brown;
+    border-radius: 8px;
+    margin: 20px 50px 20px 50px;
+    padding: 15px;
+    max-width: 400px;
+} */
+
+/* 3 */
+/* .par-1 {
+    border: 5px solid #1404cb;
+    background-color: #7fffd4;
+    border-radius: 8px;
+    margin: 20px 50px;
+    padding: 15px;
+    max-width: 400px;
+} */
+
+/* 4 */
+/* .par-1 {
+    border: 4px solid red;
+    border-radius: 8px;
+    margin: 20px 50px 20px 50px;
+    padding: 15px;
+    max-width: 400px;
+} */

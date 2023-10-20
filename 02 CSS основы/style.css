@@ -1,0 +1,126 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* стили для кнопки */
+.myButton {
+    box-shadow: 0px 0px 0px 2px #9fb4f2;
+    background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+    background-color: #7892c2;
+    border-radius: 13px;
+    border: 2px solid #4e6096;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 22px;
+    padding: 12px 44px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #283966;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+    background-color: #476e9e;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+/* стили для кнопки */
+
+
+/* h1 {
+    color: orange;
+}
+
+h2 {
+    color: blue;
+}
+
+p {
+    color: orangered;
+    background-color: aqua;
+} */
+
+.par-1 {
+    color: chocolate;
+    background-color: aliceblue;
+}
+
+.par-2 {
+    color: purple;
+    background-color: cadetblue;
+    padding: 20px;
+}
+
+/* стили по ID */
+#head-1 {
+    color: deeppink;
+}
+
+.head {
+    color: black;
+}
+
+.par-3 {
+    color: rgb(48, 101, 148);
+    background-color: rgb(151, 205, 252);
+
+    /* граница */
+    border: 3px solid rgb(170, 214, 252);
+    /* border-left: 15px solid blue;
+    border-right: 5px solid orchid;
+    border-top: 3px solid red;
+    border-bottom: 4px dashed sienna; */
+    /* радиус скругления */
+
+    border-radius: 10px;
+
+    /* внешние отступы */
+    /* margin: 24px; */
+    /* margin-left: 30px; */
+    /* margin: 10px 20px 15px 25px; */
+    /* margin: 20px 40px; */
+    /* margin: 20px 30px 25px; */
+    margin: 0 auto;
+
+    /* внутренние отступы */
+    padding: 10px;
+
+    /* ширина, высота */
+    max-width: 500px;
+    /* height: 30px; */
+}
+
+/***************************** .user *******************************/
+.user {
+    max-width: 300px;
+    padding: 10px;
+    margin: 30px auto;
+    border-radius: 8px;
+    background-color: antiquewhite;
+    color: #28438f;
+    text-align: center;
+}
+
+.user img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.user h2 {
+    margin: 10px 20px;
+    /* text-decoration: overline; */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.user p {
+    margin: 8px 16px;
+    background-color: transparent;
+}
