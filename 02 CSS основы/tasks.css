@@ -103,3 +103,98 @@ li {
     padding: 15px;
     max-width: 400px;
 } */
+
+
+/* 1 задание */
+/* <p class="par-4">Принимая во внимание, что пренебрежение и презрение к правам человека</p> */
+/* задайте элементу произвольные базовые стили, включая стили для текста */
+/* задайте элементу стили, которые срабатывают при наведении мышью */
+
+/* 1 */
+/* .par-4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: lightcoral;
+    background-color: lightblue;
+}
+
+.par-4:hover {
+    color: lightblue;
+    background-color: lightcoral;
+    cursor: zoom-in;
+}
+
+.par-4:active {
+    font-size: 20px;
+    cursor: zoom-out;
+} */
+
+/* 2 */
+/* .par-4 {
+    padding: 20px 10px;
+    color: #1404cb;
+    border: 1 solid #283966;
+    background-color: #c3cde9;
+}
+
+.par-4:hover {
+    background-color: #8298d2;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.par-4:active {
+    color: rgb(146, 16, 16);
+} */
+
+/* 3 */
+/* .par-4 {
+    font-size: 18px;
+    color: purple;
+}
+
+.par-4:hover {
+    font-size: 25px;
+    color: rgba(100, 219, 21, 0.075);
+} */
+
+/* 4 */
+/* .par-4 {
+    width: max-content;
+    margin: 0 auto;
+    padding: 2%;
+    cursor: pointer;
+    border: 2px dotted transparent;
+    color: #de546b;
+}
+
+.par-4:hover {
+    border: 2px dotted #c8838e;
+    border-radius: 20px;
+    color: #000000;
+    background-color: #f4f4d4;
+} */
+
+/* 4 */
+/* .par-4 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    transition: 0.15s;
+    font-style: italic;
+    font-weight: lighter;
+    color: bisque;
+}
+
+.par-4:hover {
+    color: blueviolet;
+    opacity: 0.7;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.par-4:active {
+    color: blue;
+    opacity: 0.6;
+    font-weight: bolder;
+    font-size: 45px;
+} */

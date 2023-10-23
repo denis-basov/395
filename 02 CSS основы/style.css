@@ -2,7 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 } */
+
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* body {
+    background-color: #9fb4f2;
+} */
+
+span {
+    font-weight: bold;
+}
+
+div {
+    font-size: 20px;
+}
 
 /* стили для кнопки */
 .myButton {
@@ -49,8 +66,35 @@ p {
 
 .par-1 {
     color: chocolate;
-    background-color: aliceblue;
+    background-color: rgb(200, 214, 229);
+    border: 2px solid transparent;
 }
+
+/* стили при наведении мышью */
+.par-1:hover {
+    background-color: rgb(197, 228, 254);
+    border: 2px solid rgb(250, 190, 248);
+    text-decoration: overline;
+    color: crimson;
+    cursor: pointer;
+}
+
+/* псевдоэлемент */
+.par-1::before {
+    content: '⛅ ';
+}
+
+.par-1::after {
+    /* content: ' (' attr(href) ')'; */
+}
+
+.par-1 span {
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: blue;
+}
+
 
 .par-2 {
     color: purple;
@@ -61,6 +105,13 @@ p {
 /* стили по ID */
 #head-1 {
     color: deeppink;
+    /* стили текста */
+    /* font-size: 16px; */
+    font-weight: 700;
+    /* font-style: italic; */
+    /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
+    /* font-family: "Lucida Console", "Courier New", monospace; */
+    display: inline-block;
 }
 
 .head {
@@ -98,14 +149,24 @@ p {
 }
 
 /***************************** .user *******************************/
+.user.user-1 {
+    color: #ffffff;
+}
+
 .user {
-    max-width: 300px;
+    max-width: 350px;
     padding: 10px;
-    margin: 30px auto;
+    margin-right: 50px;
     border-radius: 8px;
     background-color: antiquewhite;
     color: #28438f;
     text-align: center;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.user:hover {
+    box-shadow: 0px 7px 61px -1px rgba(0, 0, 0, 0.22);
 }
 
 .user img {
@@ -123,4 +184,87 @@ p {
 .user p {
     margin: 8px 16px;
     background-color: transparent;
+}
+
+
+/* абсолютное позиционирование */
+/* контейнер */
+.user-2 {
+    background-color: #9fb4f2;
+    position: relative;
+}
+
+/* дочерний элемент */
+.user-2 .new-user {
+    background-color: rgb(252, 162, 67);
+    border: 2px solid bisque;
+    width: 100px;
+    border-radius: 5px;
+    margin: 0;
+
+    position: absolute;
+    /* top: 50px;
+    left: 50px; */
+    /* bottom: -10px;
+    right: -50px; */
+    top: -10px;
+    right: -50px;
+}
+
+
+
+
+
+.cities-list {
+    /* list-style-type: "\1F44D"; */
+    list-style-type: '⛅';
+    /* list-style: none; */
+}
+
+.drinks-list {
+    list-style-type: lower-alpha;
+}
+
+/* переходы */
+.head-2 {
+    background-color: #9fb4f2;
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s;
+}
+
+.head-2:hover {
+    background-color: #5b81f0;
+    color: rgb(144, 164, 182);
+    border-radius: 50px;
+    cursor: pointer;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid #ff0000;
+}
+
+/* анимация */
+.animation {
+    width: 200px;
+    height: 200px;
+    background-color: #5b81f0;
+    margin: 20px;
+
+    background-image: url('img/1.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    animation-name: my-animation;
+    animation-duration: 2s;
+}
+
+@keyframes my-animation {
+    from {
+        background-image: url('img/3.jpg');
+    }
+
+    to {
+        background-image: url('img/1.jpg');
+    }
 }
