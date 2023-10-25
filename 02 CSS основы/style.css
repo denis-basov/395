@@ -254,17 +254,62 @@ p {
     background-image: url('img/1.jpg');
     background-repeat: no-repeat;
     background-size: contain;
+    position: relative;
 
-    animation-name: my-animation;
-    animation-duration: 2s;
+    /* настройки анимации */
+    /* animation-name: my-animation;
+    animation-duration: 5s; */
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: reverse; */
 }
 
+/* ключевые кадры */
 @keyframes my-animation {
-    from {
-        background-image: url('img/3.jpg');
+    0% {
+        background-image: url('img/1.jpg');
+        left: 0;
+        top: 0;
     }
 
-    to {
-        background-image: url('img/1.jpg');
+    20% {
+        background-image: url('img/5.jpg');
+        left: 50px;
+        top: 50px;
     }
+
+    40% {
+        background-image: url('img/4.jpg');
+        left: 100px;
+        top: 100px;
+    }
+
+    60% {
+        background-image: url('img/3.jpg');
+        left: 200px;
+        top: 200px;
+    }
+
+    80% {
+        background-image: url('img/2.jpg');
+        left: 100px;
+        top: 100px;
+    }
+
+    100% {
+        background-image: url('img/1.jpg');
+        left: 0;
+        top: 0;
+    }
+}
+
+.box {
+    width: 500px;
+    height: 200px;
+    box-sizing: border-box;
+    background-color: #476e9e;
+
+    padding: 20px;
+    border: 5px solid tan;
+    margin: 30px;
 }
