@@ -37,9 +37,11 @@ cats--;
 /*
 let greet = "Hello";
 let animal = "Elephant";
-console.log(greet + ', ' + animal);
+console.log(greet + ", " + animal);
 // конкатенация - объединение строк
-*/
+
+// получение длины строки
+console.log(animal.length);*/
 
 /*
 let firstName = "Ян";
@@ -112,12 +114,48 @@ console.log(+age + 1); // 4
 */
 
 // обращение к символам строки
-let firstName = "иван";
+//let firstName = "иван";
 // console.log(firstName[1]); // в
 
 // увечить первую букву имени
 // let firstLetter = firstName[0];
 // console.log(firstLetter.toUpperCase());
 
-let firstLetterUpper = firstName[0].toUpperCase();
-console.log(firstLetterUpper);
+//let firstLetterUpper = firstName[0].toUpperCase();
+//console.log(firstLetterUpper);
+
+// let isAdmin = false;
+// console.log(typeof isAdmin);
+
+// let login;
+// console.log(login);
+
+// login = "ivan111";
+// console.log(login);
+
+// let login = null;
+// console.log(login);
+
+// login = "ivan111";
+// console.log(login);
+
+// '=' - присваивание значения переменной
+// let age = 33;
+// age = 22;
+// console.log(age);
+
+// '==' - сравнение значений
+// let age = 33;
+// console.log(age == 21);
+
+// let age = 11;
+// if (age >= 21) {
+//   console.log("Добро пожаловать!!!");
+// }
+
+// псевдо-ложные значения
+// false, 0, '', null, undefined, NaN
+// все остальные значения - истина
+// if ("4uu") {
+//   console.log("ИСТИНА!!!");
+// }

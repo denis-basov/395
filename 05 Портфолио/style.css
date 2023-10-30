@@ -61,6 +61,7 @@ header nav a:hover {
     border: 1px solid #5D3974;
 }
 
+
 header nav .contact-btn {
     color: #ffffff;
     padding: 0.8rem 3.2rem;
@@ -114,6 +115,11 @@ main .title p {
     font-weight: 700;
     line-height: 158.5%;
     /* 22.19px */
+}
+
+/* resume */
+.resume {
+    grid-template-columns: 20rem 20rem;
 }
 
 @media(max-width: 1000px) {
