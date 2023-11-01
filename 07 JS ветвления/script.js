@@ -125,3 +125,33 @@ if (age < 6 || age >= 65) {
 // } else {
 //   console.log("Проходите бесплатно");
 // }
+
+// тернарный оператор
+
+let login = "User223";
+let age = 12;
+let msg;
+
+// if (age >= 18) {
+//   msg = "Hello";
+// } else {
+//   msg = "Access denied";
+// }
+
+// let str = `
+//   <div>
+//     <h2>ООО Рога и копыта</h2>
+//     <p>${login}, ${msg}</p>
+//   </div>
+// `;
+// console.log(str);
+
+// age >= 18 ? console.log("Hello") : console.log("Access denied");
+
+let str = `
+  <div>
+    <h2>ООО Рога и копыта</h2>
+    <p>${login}, ${age >= 18 ? "Hello" : "Access denied"}</p>
+  </div>
+`;
+console.log(str);
