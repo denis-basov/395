@@ -134,3 +134,32 @@ let post = {
 //let container = document.querySelector("#container");
 // 2 - вставка сформированной строки внутрь выбранного элемента
 //container.insertAdjacentHTML("beforeend", postStr);
+
+// массив объектов
+
+// console.log(users[2].firstName[1]);
+//console.log(users);
+// console.log(users[1].hobby[1][6]);
+//console.log(users[1]);
+
+// let testUser = {
+//   firstName: "Анна",
+//   lastName: "Иванова",
+//   hobby: ["Спать", "Плавать"],
+// };
+
+// console.log(testUser.hobby[1]);
+
+// 1 задание
+// получите строку на стнове массива объектов
+// Имя: Иван, фамилия: Петров, хобби: Плавать, Есть
+
+//1
+// console.log(`Имя: ${users[0].firstName}, фамилия: ${users[2].lastName}, хобби: ${users[1].hobby[1]}, ${users[2].hobby[1]}`);
+
+//2
+// let string = `Имя: ${users[0].firstName}, фамилия: ${users[2].lastName}, хобби: ${users[1].hobby[1]}, ${users[2].hobby[1]}`;
+// console.log(string);
+
+//3
+// console.log(`Имя: ${users[0].firstName}, фамилия: ${users[2].lastName}, хобби: ${users[1].hobby[1]}, ${users[2].hobby[1]}`);
