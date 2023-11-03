@@ -160,17 +160,158 @@
 /**
  * for...of
  */
+//1
 // for (let fruit of fruits) {
 //   console.log(fruit);
 // }
 
-let authorsContainer = document.querySelector("#authors");
+//2
+// let authorsContainer = document.querySelector("#authors");
 
-for (let author of authors) {
-  let authorStr = `
-      <div class="author">
-        <h2>${author.firstName} ${author.lastName}</h2>
-      </div>
-  `;
-  authorsContainer.insertAdjacentHTML("afterbegin", authorStr);
+// for (let author of authors) {
+//   let authorStr = `
+//       <div class="author">
+//         <h2>${author.firstName} ${author.lastName}</h2>
+//       </div>
+//   `;
+//   authorsContainer.insertAdjacentHTML("afterbegin", authorStr);
+// }
+
+//3
+// let authorsContainer = document.querySelector("#authors");
+// let output = '';
+
+// for (let author of authors) {
+//   output += `
+//       <div class="author">
+//         <h2>${author.firstName} ${author.lastName}</h2>
+//       </div>
+//   `;
+// }
+// authorsContainer.insertAdjacentHTML('beforeend', output);
+
+/*
+// получить сумму элементов массива
+// let numbers = [6, 3, 5, 8, 9, 3, 4, 5, 1, 6, 8, 9, 3, 4];
+let sum = 0; // контейнер для суммы
+for (let num of numbers) {
+  sum = sum + num; // складываем
+  //sum += num;
 }
+console.log(sum);*/
+
+// 1 задание
+// let fruits = ["Киви", "Кокос", "Апельсин", "Банан", "Яблоко"];
+// соберите из масива строку по типу
+// Киви, Кокос, Апельсин, Банан, Яблоко
+
+//1
+// let fruitsStr = "";
+// for (let fruit of fruits) {
+//   fruitsStr += fruit;
+// }
+// console.log(fruitsStr);
+
+//2
+// let fruitsStr = "";
+// for (let fruit of fruits) {
+//   fruitsStr += fruit + ", ";
+// }
+// console.log(fruitsStr);
+
+//3
+// let str = "";
+// for (let i = 0; i < fruits.length; i++) {
+//   str = str + fruits[i] + ", ";
+// }
+// console.log(str);
+
+//4
+// let string = "";
+// for (let fruit of fruits) {
+//   if (string === "") {
+//     // если первая итерация, то запятую и пробел не ставим
+//     string = `${fruit}`;
+//   } else {
+//     string = `${string}, ${fruit}`;
+//   }
+// }
+// console.log(string);
+
+//5
+// let fruitStr = "";
+
+// let i = 0;
+// for (let fruit of fruits) {
+//   if (i === fruits.length - 1) {
+//     fruitStr += fruit;
+//     break;
+//   }
+//   fruitStr += fruit + ", ";
+//   i++;
+// }
+// console.log(fruitStr);
+
+// 6
+// let fruitsStr = "";
+// for (let i = 0; i < fruits.length; i++) {
+//   if (i === fruits.length - 1) {
+//     // если последняя итерация, добавляем без запятой
+//     fruitsStr = fruitsStr + fruits[i];
+//   } else {
+//     fruitsStr = fruitsStr + fruits[i] + ", ";
+//   }
+// }
+// console.log(fruitsStr);
+
+//7
+// let fruitsStr = fruits.join(", ");
+// console.log(fruitsStr);
+
+// Получить на основе массива массив со строками в верхнем регистре
+// let fruits = ["Киви", "Кокос", "Апельсин", "Банан", "Яблоко"];
+//console.log('hello'.toUpperCase());
+
+// let fruitsCaps = [];
+// for (let fruit of fruits) {
+//   let friutsUpper = fruit.toUpperCase(); // увеличиваем регистр
+//   fruitsCaps.push(friutsUpper); // добавляем в массив
+// }
+// console.log(fruitsCaps);
+
+// fruits.toUpperCase();
+// console.log(fruits);
+
+// "hello".push(" !!!");
+
+// let str = "hello!";
+// for (let char of str) {
+//   console.log(char);
+// }
+
+// получение суммы товаров по корзине
+// let sum = 0;
+// for (let item of cart) {
+//   sum += item.price;
+// }
+// console.log(sum);
+
+/*
+// получение максимального значения в массиве
+// let numbers = [6, 3, 5, 8, 9, 3, 4, 5, 1, 6, 8, 9, 3, 4];
+let max = 0;
+for (let num of numbers) {
+  // если текущий элемент больше максимума
+  if (num > max) {
+    max = num; // обновляем максимум
+  }
+}
+console.log(max);*/
+
+/**
+ * for ... in - перебор ключей объектов
+ */
+// for (let key in post) {
+//   console.log(key);
+//   console.log(post[key]);
+// }
