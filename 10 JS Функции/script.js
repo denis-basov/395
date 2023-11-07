@@ -182,3 +182,195 @@ function getCalc(num1, num2) {
 
 let res = getCalc(4, 7);
 console.log(res);*/
+
+// методы
+/*
+let student = {
+  firstName: "Иван",
+  lastName: "Петров",
+  age: 22,
+  getStudentInfo: function () {
+    return `Имя: ${this.firstName}, фамилия: ${this.lastName}, возраст: ${this.age}.`;
+  },
+  sayHi(name) {
+    console.log(`Hi, ${name}`);
+  },
+};
+*/
+// student.sayHi("Инна");
+// console.log(student.getStudentInfo());
+
+//console.log(student);
+
+/**
+ * push
+ */
+// let fruits = ["Киви", "Кокос", "Апельсин", "Банан", "Яблоко"];
+// let arrLen = fruits.push("Кокос", "Ананас");
+// console.log(arrLen);
+//console.log(fruits);
+
+/**
+ * pop
+ */
+// let lastEl = fruits.pop();
+// console.log(fruits);
+// console.log(lastEl);
+
+/*
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object1));
+// Expected output: Array ["somestring", 42, false]*/
+
+/*
+
+
+
+let student = {
+  firstName: "Иван",
+  lastName: "Петров",
+  age: 22,
+};
+
+let studentArr = [];
+for (let key in student) {
+  studentArr.push(student[key]);
+}
+console.log(studentArr.join());
+*/
+
+/**
+ * Shift
+ */
+// let fruits = ["Киви", "Кокос", "Апельсин", "Банан", "Яблоко"];
+// console.log(fruits);
+// fruits.shift();
+// console.log(fruits);
+
+/**
+ * unshift
+ */
+// fruits.unshift("Ананас");
+// console.log(fruits);
+
+// let animals = ["ant", "bison", "camel", "duck", "elephant", "cat", "dog"];
+// 1 задание
+// переместите элемент массива со значением "dog" из конца массива
+// в его начало
+
+//1
+// console.log(animals);
+// animals.unshift(animals.pop());
+// console.log(animals);
+
+//2
+// let lastEl = animals.pop();
+// animals.unshift(lastEl);
+// console.log(animals);
+
+//3
+// let lastEl = animals[animals.length - 1];
+// animals.pop();
+// animals.unshift(lastEl);
+// console.log(animals);
+
+//4
+// animals(unshift(animals.pop()));
+// animals.unshift(animals.pop());
+// console.log(animals);
+
+/**
+ * slice - копия части массива
+ */
+// let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
+// let petsPart = pets.slice(3);
+// console.log(pets);
+// console.log(petsPart);
+
+// let petsPart = pets.slice(1, 5);
+// console.log(pets);
+// console.log(petsPart);
+
+// let petsPart = pets.slice();
+// console.log(pets);
+// console.log(petsPart);
+
+/**
+ * копирование массива
+ */
+/*
+// копирование по ссылке
+let newPets = pets;
+newPets.pop();
+
+console.log(pets);
+console.log(newPets);*/
+
+/*
+// копирование по значению
+let petsPart = pets.slice();
+petsPart.pop();
+
+console.log(pets);
+console.log(petsPart);*/
+
+/*
+// копирование с пом. concat
+let newPets = pets.concat();
+newPets.pop();
+
+console.log(pets);
+console.log(newPets);*/
+
+/**
+ * splice
+ */
+// let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
+// let newPets = pets.splice(4, 0, "duck", "bison");
+
+// console.log("Исходный массив", pets);
+// console.log("Удаленные элементы", newPets);
+
+// let fruits = ["Киви", "Кокос", "Апельсин", "Банан", "Яблоко"];
+// 2 задание. Сформируйте на основе исходного массива новый.
+// ["Киви", "Кокос", "Банан", "cat", "dog", "Яблоко"]
+
+// 1
+/*
+let catDog = pets.splice(0, 2); // ["cat", "dog"]
+console.log(catDog);
+fruits.splice(2, 1); // удаляем апельсин
+console.log(fruits);
+fruits.splice(3, 0, ...catDog); // добавляем элементы
+console.log(fruits);*/
+
+//2
+/*
+fruits.splice(2, 1);
+fruits.splice(3, 0, 'cat', 'dog');
+console.log(fruits);*/
+
+//3
+// fruits.splice(2, 2, "Банан", "cat", "dog");
+// console.log(fruits);
+
+/**
+ * sort
+ */
+// let animals = ["ant", "bison", "camel", "duck", "elephant", "cat", "dog"];
+// animals.sort();
+// console.log(animals);
+
+// animals.sort().reverse();
+
+// numbers.sort();
+// console.log(numbers);
+
+// let nums = [1, 11, 21, 25, 74, 34, 8, 99, 111, 15, 26, 8, 4];
+// nums.sort();
+// console.log(nums);

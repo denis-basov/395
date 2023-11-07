@@ -69,3 +69,14 @@ let post = {
   author: "АНДРЕЙ ЯШЛАВСКИЙ",
   views: 441,
 };
+
+/*
+let objKeys = ["firstName", "lastName", "age"];
+let objValues = ["Иван", "Сидоров", 11];
+
+let student = {
+  firstName: "Иван",
+  lastName: "Сидоров",
+  age: 11,
+};
+*/
