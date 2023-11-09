@@ -1,4 +1,4 @@
-let numbers = [6, 3, 5, 8, 9, 3, 4, 5, 1, 6, 8, 9, 3, 4];
+let numbers = [6, 3, 5, 8, 1, 9, 3, 4, 5, 1, 6, 8, 9, 3, 4];
 const mix = [42, "hello", true, null, undefined, false, [1, 2, 3]];
 let fruits = ["Киви", "Кокос", "Апельсин", "Банан", "Яблоко"];
 let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
@@ -47,16 +47,19 @@ let authors = [
 
 let cart = [
   {
+    id: 23,
     name: "Зубная щетка",
     qty: 2,
     price: 5,
   },
   {
+    id: 43,
     name: "Зубная паста",
     qty: 4,
     price: 10,
   },
   {
+    id: 12,
     name: "Зубная нить",
     qty: 1,
     price: 3,
