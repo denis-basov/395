@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <button id="press-btn">Нажми меня</button>
+    <button>test</button>
+
+    <h1 id="head-1" class="head">DOM</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, voluptate?</p>
+
+    <!-- users - контейнер для ВСЕХ пользователей -->
+    <div class="users">
+      <!-- user - контейнер для ОДНОГО пользователя  -->
+      <div class="user user-1">
+        <img
+          src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Петр Сидоров"
+          width="300"
+        />
+        <h2>Имя: Петр. Фамилия: Сидоров</h2>
+        <p>Возраст: 11 лет</p>
+        <p>Город проживания: Пенза</p>
+        <h3>Хобби:</h3>
+        <ol>
+          <li>Гулять с собакой</li>
+          <li>Кататься на велосипеде</li>
+          <li>Собирать конструктор</li>
+          <li>Есть мороженое</li>
+        </ol>
+        <button class="add-to-friends">Добавить в друзья</button>
+      </div>
+
+      <div class="user user-2">
+        <img
+          src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Петр Сидоров"
+          width="300"
+        />
+        <h2>Имя: Иван. Фамилия: Иванов</h2>
+        <p>Возраст: 21 лет</p>
+        <p>Город проживания: Самара</p>
+        <h3>Хобби:</h3>
+        <ol>
+          <li>Спать</li>
+          <li>Гулять</li>
+          <li>Есть мороженое</li>
+        </ol>
+        <button class="add-to-friends">Добавить в друзья</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

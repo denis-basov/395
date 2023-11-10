@@ -487,3 +487,28 @@ console.log(student);
 /**
  * sort
  */
+//let nums = [6, 3, 222, 8, 11, 13, 15, 37, 4, 5, 111, 6, 8, 9, 3, 4];
+//let nums = [3, 6, 8, 11, 222, 13, 15, 37, 4, 5, 111, 6, 8, 9, 3, 4];
+// a-b
+// 1. a=6, b=3.   6-3=3
+// 2. a=6, b=222. 6-222=-216
+// 3. a=222, b=8. 222-8=214
+// 4. a=222, b11. 222-11=211
+
+// по возрастанию
+// nums.sort(function (a, b) {
+//   return a - b;
+// });
+
+// по убыванию
+// nums.sort(function (a, b) {
+//   return b - a;
+// });
+// console.log(nums);
+
+// сортировка объектов в массиве по уменьшению цены
+// cart.sort(function (a, b) {
+//   return b.price - a.price;
+// });
+
+// console.log(cart);
