@@ -12,7 +12,23 @@
 
     <h1 id="head-1" class="head">DOM</h1>
 
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, voluptate?</p>
+    <p id="par-1">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, voluptate? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      <span>Rem exercitationem, nisi cum recusandae eligendi quia quas dignissimos,</span> ipsum ad iusto voluptates corporis ullam harum consequuntur ab itaque eos repellendus.
+    </p>
+
+    <div id="worker-1" class="worker">
+      <img
+        src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="worker-1"
+      />
+    </div>
+    <div id="worker-2" class="worker">
+      <img
+        src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="worker-2"
+      />
+    </div>
 
     <!-- users - контейнер для ВСЕХ пользователей -->
     <div class="users">
@@ -32,6 +48,7 @@
           <li>Кататься на велосипеде</li>
           <li>Собирать конструктор</li>
           <li>Есть мороженое</li>
+          <li>Гулять под летним дождем</li>
         </ol>
         <button class="add-to-friends">Добавить в друзья</button>
       </div>
@@ -46,6 +63,7 @@
         <p>Возраст: 21 лет</p>
         <p>Город проживания: Самара</p>
         <h3>Хобби:</h3>
+        <!-- hello -->
         <ol>
           <li>Спать</li>
           <li>Гулять</li>
@@ -53,7 +71,51 @@
         </ol>
         <button class="add-to-friends">Добавить в друзья</button>
       </div>
+      <div class="user user-3">Hello</div>
     </div>
+
+    <h2>Форма регистрации</h2>
+    <form class="reg-form">
+      <div class="form-input">
+        <label for="firstName">Имя:</label>
+        <input type="text" name="firstName" id="firstName" />
+        <span class="error" id="firstNameError"></span>
+      </div>
+
+      <div class="form-input">
+        <label for="lastName">Фамилия:</label>
+        <input type="text" name="lastName" id="lastName" maxlength="20" placeholder="Введите фамилию" />
+      </div>
+
+      <div class="form-input">
+        <label for="login">Логин:</label>
+        <input type="text" name="login" id="login" placeholder="Только латиница, не менее трех символов" size="40" />
+      </div>
+
+      <div class="form-input">
+        <label for="email">Адрес электронной почты:</label>
+        <input type="email" name="email" id="email" />
+      </div>
+
+      <div class="form-input">
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" id="password" placeholder="Не менее восьми произвольных символов" size="40" />
+      </div>
+
+      <div class="form-input">
+        <label for="avatar">Аватар:</label>
+        <input type="file" name="avatar" id="avatar" />
+      </div>
+
+      <div class="form-input">
+        <label for="birth-date">Дата рождения:</label>
+        <input type="date" name="birth-date" id="birth-date" value="2023-10-19" />
+      </div>
+
+      <div>
+        <input type="submit" value="Зарегистрироваться" />
+      </div>
+    </form>
 
     <script src="script.js"></script>
   </body>

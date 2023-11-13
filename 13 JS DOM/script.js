@@ -120,6 +120,7 @@ users.forEach(function (user) {
 /*
 // 1. получаем все кнопки
 let addBtns = document.querySelectorAll(".add-to-friends");
+console.log(addBtns);
 
 // 2. перебираем кнопки
 addBtns.forEach(function (btn) {
@@ -172,3 +173,287 @@ addBtns.forEach(function (btn) {
     }
   });
 });*/
+
+/**
+ * innerText
+ * textContent
+ */
+// let par1 = document.querySelector("#par-1");
+// console.log(par1.textContent);
+// console.log(par1.innerText);
+
+// let user1 = document.querySelector(".user-1");
+// console.log(user1.textContent);
+// console.log(user1.innerText);
+// user1.textContent = "Hello";
+
+/**
+ * innerHTML
+ */
+// let par1 = document.querySelector("#par-1");
+// console.log(par1.textContent);
+// console.log(par1.innerHTML);
+
+/*
+let user1 = document.querySelector(".user-1");
+console.log(user1.textContent);
+console.log(user1.innerHTML);
+user1.textContent = "<h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, voluptate?</h1>";
+user1.innerHTML = "<h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, voluptate?</h1>";*/
+
+/**
+ * копируем первого пользователя в <div class="user user-3"></div>
+ */
+/*
+// получаем элементы
+let user1 = document.querySelector(".user-1");
+let user3 = document.querySelector(".user-3");
+
+// сохраняем содержимое в переменную
+let user1InnerHTML = user1.innerHTML;
+user3.innerHTML = user1InnerHTML;*/
+
+// 1 задание
+// - Поместите картинку с первым рабочим вместо второй картинки.
+// - Поменяйте картинки работников местами.
+
+//1
+/*
+let worker1 = document.querySelector("#worker-1");
+let worker2 = document.querySelector("#worker-2");
+let worker2InnerHTML = worker2.innerHTML;
+worker2.innerHTML = worker1.innerHTML;
+worker1.innerHTML = worker2InnerHTML;*/
+
+//2
+/*
+let worker1Img = document.querySelector("#worker-1");
+let worker2Img = document.querySelector("#worker-2");
+
+// 1 пункт
+//worker2Img.innerHTML = worker1Img.innerHTML;
+
+// 2 пункт
+let temp_img = worker1Img.innerHTML;
+
+worker1Img.innerHTML = worker2Img.innerHTML;
+worker2Img.innerHTML = temp_img;*/
+
+//3
+/*
+let firstWorker = document.querySelector("#worker-1");
+let secondWorker = document.querySelector("#worker-2");
+let img = secondWorker.innerHTML;
+secondWorker.innerHTML = firstWorker.innerHTML;
+firstWorker.innerHTML = img;*/
+
+//4
+/*
+let worker1 = document.querySelector("#worker-1");
+let worker2 = document.querySelector("#worker-2");
+
+// сохраняем картинку второго работника
+let worker2img = worker2.innerHTML;
+
+// вместо картинки второго работника ставим первую картинку
+worker2.innerHTML = worker1.innerHTML;
+// из сохраненной переменной восствнавливаем значение картинки второго работника
+worker1.innerHTML = worker2img;*/
+
+//5
+/*
+let worker1 = document.querySelector("#worker-1");
+let worker2 = document.querySelector("#worker-2");
+
+// сохраняем картинку первого работника
+let worker1img = worker1.innerHTML;
+// сохраняем картинку второго работника
+let worker2img = worker2.innerHTML;
+
+// кладем в первого работника картинку второго
+worker1.innerHTML = worker2img;
+// кладем во второго работника картинку первого
+worker2.innerHTML = worker1img;*/
+
+/**
+ * смена картинок по нажатию на кнопку
+ */
+/*
+let pressBtn = document.getElementById("press-btn");
+let worker1 = document.querySelector("#worker-1");
+let worker2 = document.querySelector("#worker-2");
+
+pressBtn.addEventListener("click", function () {
+  let worker1img = worker1.innerHTML;
+  let worker2img = worker2.innerHTML;
+
+  worker1.innerHTML = worker2img;
+  worker2.innerHTML = worker1img;
+});*/
+
+/**
+ * value
+ */
+/*
+let firstName = document.querySelector("#firstName");
+let firstNameError = document.querySelector("#firstNameError");
+
+// активация поля ввода
+// firstName.addEventListener("focus", function () {
+//   console.log("focus");
+// });
+
+// ждем событие, когда фокус покинет поле ввода
+firstName.addEventListener("blur", function () {
+  // получаем введенное значение и удаляем пробелы с концов строки
+  let value = firstName.value.trim();
+
+  // if (!value) {
+  //   console.log("Поле не должно быть пустым");
+  // }
+
+  // если клиент ничего не ввел
+  if (value.length === 0) {
+    // вставляем в спан текст с ошибкой
+    firstNameError.textContent = "Поле не должно быть пустым";
+    // задаем полю красный бордер и фон
+    firstName.style.border = "1px solid red";
+    firstName.style.background = "rgb(253, 217, 217)";
+  } else {
+    // если введенное значение не пустое
+    // убираем ошибку и меняем стили обратно
+    firstNameError.textContent = "";
+    firstName.style.border = "2px solid rgb(128, 255, 0)";
+    firstName.style.background = "";
+  }
+});
+*/
+
+/**
+ * parentElement
+ * children
+ */
+// let user1List = document.querySelector(".users .user-1 ol");
+
+/*
+// parentElement
+// получаю родителя списка
+let parent = user1List.parentElement;
+// на родителя вешаю обработчик по клику
+parent.addEventListener("click", function () {
+  parent.style.display = "none";
+});
+*/
+
+// children
+// получить элементы списка в виде массива строк
+/*
+//1
+let listChildren = user1List.children;
+console.log(listChildren);
+
+let user2Hobbies = [];
+for (let i = 0; i < listChildren.length; i++) {
+  user2Hobbies.push(listChildren[i].textContent);
+}
+console.log(user2Hobbies);
+*/
+
+//2
+/*
+// получить элементы списка в виде массива строк
+let listChildren = user1List.children;
+
+// перекладываем элементы списка в массив
+listChildren = [...listChildren];
+
+let user2Hobbies = listChildren.map(function (element) {
+  return element.textContent;
+});
+
+//let user2Hobbies = listChildren.map((element) => element.textContent);
+console.log(user2Hobbies);
+*/
+
+/**
+ * nextSibling / nextElementSibling
+ * previousSibling / previousElementSibling
+ */
+/*
+let user1List = document.querySelector(".users .user-1 ol");
+console.log(user1List.nextElementSibling);
+console.log(user1List.previousElementSibling);
+*/
+
+// получение неразмеченного текста
+// let head3 = document.querySelector(".user-2 h3");
+// console.log(head3.nextSibling);
+
+/**
+ * получение span при помощи nextElementSibling
+ */
+/*
+let firstName = document.querySelector("#firstName");
+let firstNameError = firstName.nextElementSibling;
+
+// ждем событие, когда фокус покинет поле ввода
+firstName.addEventListener("blur", function () {
+  // получаем введенное значение и удаляем пробелы с концов строки
+  let value = firstName.value.trim();
+
+  // если клиент ничего не ввел
+  if (value.length === 0) {
+    // вставляем в спан текст с ошибкой
+    firstNameError.textContent = "Поле не должно быть пустым";
+    // задаем полю красный бордер и фон
+    firstName.style.border = "1px solid red";
+    firstName.style.background = "rgb(253, 217, 217)";
+  } else {
+    // если введенное значение не пустое
+    // убираем ошибку и меняем стили обратно
+    firstNameError.textContent = "";
+    firstName.style.border = "2px solid rgb(128, 255, 0)";
+    firstName.style.background = "";
+  }
+});
+*/
+
+/**
+ * style
+ */
+/*
+let user1 = document.querySelector(".user-1");
+
+user1.style.backgroundColor = "blue";
+user1.style.backgroundImage =
+  "url(https://images.unsplash.com/photo-1682685797332-e678a04f8a64?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)";
+user1.style.color = "orange";*/
+
+/**
+ * classList
+ */
+// add - добавление класса(ов) элементу
+// let user1Hobbies = document.querySelector(".user-1 ol");
+
+// при клике на список, добавляем класс hobbies
+// user1Hobbies.addEventListener("click", function () {
+//   user1Hobbies.classList.add("hobbies");
+// });
+
+// при клике на список, добавляем класс hidden
+// user1Hobbies.addEventListener("click", function () {
+//   user1Hobbies.classList.add("hidden");
+// });
+
+// user1Hobbies.addEventListener("click", function () {
+//   user1Hobbies.classList.add("hobbies", "hidden");
+// });
+
+// remove - удаление классов
+let user2 = document.querySelector(".user-2");
+user2.addEventListener("click", function () {
+  // удаление классов у самого элемента
+  user2.classList.remove("user-2", "user");
+  // удаление классов у соседнего элемента
+  user2.previousElementSibling.classList.remove("user-1", "user");
+});

@@ -13,3 +13,46 @@
     border: 2px solid transparent;
     padding: 20px;
 }
+
+.worker {
+    max-width: 400px;
+}
+
+.worker img {
+    width: 100%;
+}
+
+.reg-form {
+    max-width: 800px;
+    padding: 20px;
+    background-color: aliceblue;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.reg-form .form-input {
+    display: grid;
+}
+
+.hobbies {
+    background-color: aquamarine;
+    padding: 20px;
+    list-style: none;
+    display: grid;
+    gap: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.users .user-2 {
+    background-color: aquamarine;
+}
