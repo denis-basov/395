@@ -450,10 +450,247 @@ user1.style.color = "orange";*/
 // });
 
 // remove - удаление классов
+/*
 let user2 = document.querySelector(".user-2");
+console.dir(user2);
+
 user2.addEventListener("click", function () {
   // удаление классов у самого элемента
   user2.classList.remove("user-2", "user");
   // удаление классов у соседнего элемента
-  user2.previousElementSibling.classList.remove("user-1", "user");
+  //user2.previousElementSibling.classList.remove("user-1", "user");
+});
+*/
+
+/**
+ * contains - проверяет есть ли класс у элемента
+ */
+// let head1 = document.getElementById("head-1");
+// console.log(head1.classList.contains("test"));
+// console.log(head1.classList.contains("head"));
+
+/**
+ * при нажатии на кнопку показывается форма
+ * при повторном нажатии форма скрывается
+ */
+/*
+// 1
+// выбираем элементы
+let showRegFormBtn = document.querySelector("#show-reg-form");
+let regForm = document.querySelector(".reg-form");
+
+// скрываем форму
+regForm.classList.add("hidden");
+
+// при нажатии на кнопку
+showRegFormBtn.addEventListener("click", function () {
+  // если класс hidden есть у формы
+  if (regForm.classList.contains("hidden")) {
+    // удаляем класс
+    regForm.classList.remove("hidden");
+  } else {
+    // иначе, добавляем класс
+    regForm.classList.add("hidden");
+  }
+});*/
+
+//2
+/*
+// выбираем элементы
+let showRegFormBtn = document.querySelector("#show-reg-form");
+let regForm = document.querySelector(".reg-form");
+
+// скрываем форму
+regForm.classList.add("hidden");
+
+// при нажатии на кнопку
+showRegFormBtn.addEventListener("click", function () {
+  // если класс есть, удаляем, если нет, добавляем
+  regForm.classList.toggle("hidden");
+});
+*/
+
+/**
+ * createElement
+ */
+/*
+let myPar = document.createElement("p");
+myPar.textContent = "Hello, winter";
+myPar.classList.add("hello");
+myPar.id = "winter";
+
+console.log(myPar);
+*/
+
+/**
+ * создание элемента списка и добавление его в документ
+ */
+/*
+// 1 создаем элемент
+let liItem = document.createElement("li");
+liItem.textContent = "Яблоко"; // <li>Яблоко</li>
+// 2 получаем контейнер для вставки на страницу
+let fruitsList = document.querySelector("#fruits");
+// 3 добавляем элемент списка на страницу
+fruitsList.insertAdjacentElement("beforeend", liItem);*/
+
+/**
+ * при клике на кнопку
+ * берем элемент из массива
+ * и помещаем в список
+ */
+//1
+/*
+let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
+let addToListBtn = document.querySelector("#add-to-list");
+let fruitsContainer = document.querySelector("#fruits");
+
+// при клике на кнопку
+addToListBtn.addEventListener("click", function () {
+  // если длина массива не равна 0 (если массив не пустой)
+  if (fruits.length !== 0) {
+    // 1 получение последнего элемента массива
+    let lastFruit = fruits.pop(); // 'Яблоко'
+    // 2 создаем элемент (объект) списка <li>
+    let fruitLiElement = document.createElement("li");
+    // 3 помещаем полученное значение из массива в элемент
+    fruitLiElement.textContent = lastFruit;
+    // 4 добавляем полученный объект в список на странице
+    fruitsContainer.insertAdjacentElement("afterbegin", fruitLiElement);
+  }
+  // если массив пуст, меняем текст на кнопке и блокируем ее
+  if (fruits.length === 0) {
+    addToListBtn.textContent = "Фруктов больше нет";
+    addToListBtn.disabled = true;
+  }
+});*/
+
+//2
+/*
+let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
+let addToListBtn = document.querySelector("#add-to-list");
+let fruitsContainer = document.querySelector("#fruits");
+
+// при клике на кнопку
+addToListBtn.addEventListener("click", function () {
+  // если длина массива не равна 0 (если массив не пустой)
+  if (fruits.length !== 0) {
+    // 1 формирование элемента списка
+    let fruitLiElement = `<li>${fruits.pop()}</li>`;
+
+    // 2 добавляем полученный объект в список на странице
+    fruitsContainer.insertAdjacentHTML("afterbegin", fruitLiElement);
+  }
+  // если массив пуст, меняем текст на кнопке и блокируем ее
+  if (fruits.length === 0) {
+    addToListBtn.textContent = "Фруктов больше нет";
+    addToListBtn.disabled = true;
+  }
+});
+*/
+
+//3
+/*
+let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
+let addToListBtn = document.querySelector("#add-to-list");
+let fruitsContainer = document.querySelector("#fruits");
+
+let addElementToList = function () {
+  // если длина массива не равна 0 (если массив не пустой)
+  if (fruits.length !== 0) {
+    // 1 формирование элемента списка
+    let fruitLiElement = `<li>${fruits.pop()}</li>`;
+
+    // 2 добавляем полученный объект в список на странице
+    fruitsContainer.insertAdjacentHTML("afterbegin", fruitLiElement);
+  }
+  // если массив пуст, меняем текст на кнопке и блокируем ее
+  if (fruits.length === 0) {
+    addToListBtn.textContent = "Фруктов больше нет";
+    addToListBtn.disabled = true;
+  }
+};
+
+// при клике на кнопку
+addToListBtn.addEventListener("click", addElementToList);
+*/
+
+/**
+ * getAttribute
+ */
+/*
+let firstName = document.getElementById("firstName");
+console.log(firstName.getAttribute("name"));
+console.log(firstName.getAttribute("type"));
+console.log(firstName.getAttribute("id"));
+firstName.classList.add("test");
+console.log(firstName.getAttribute("class"));
+console.log(firstName.getAttribute("value")); // null
+console.log(firstName.value); // ''
+*/
+
+/**
+ * setAttribute
+ */
+/*
+let pressBtn = document.getElementById("press-btn");
+pressBtn.setAttribute("class", "head");
+pressBtn.setAttribute("disabled", "");
+pressBtn.setAttribute("style", "color:blue");
+
+console.log(pressBtn);*/
+
+/**
+ * Задание 2.8. Дана кнопка. Привяжите к ней три анонимных обработчика двойного клика по ней. Пусть первый обработчик выводит число 1, второй обработчик - число 2, а третий - число 3.
+ */
+/*
+let pressBtn = document.querySelector("#press-btn");
+
+pressBtn.addEventListener("dblclick", function () {
+  console.log(1);
+});
+
+pressBtn.addEventListener("dblclick", function () {
+  console.log(2);
+});
+
+pressBtn.addEventListener("dblclick", function () {
+  console.log(3);
+});
+*/
+
+/*
+let pressBtn = document.querySelector("#press-btn");
+pressBtn.addEventListener("dblclick", function () {
+  console.log("dblclick");
+});
+
+pressBtn.addEventListener("click", function () {
+  console.log("click");
+});
+
+pressBtn.addEventListener("mousemove", function () {
+  console.log("mousemove");
+});
+*/
+
+/**
+ * объект события
+ */
+/*
+let pressBtn = document.querySelector("#press-btn");
+
+pressBtn.addEventListener("mousemove", function (event) {
+  console.log(event.target);
+  // console.log(event.clientX, event.clientY);
+});*/
+
+/**
+ * отмена стандартного поведения браузера
+ */
+let listener = document.querySelector("#listener");
+listener.addEventListener("click", function (event) {
+  event.preventDefault();// отменяем переход по ссылке
+
+  console.log("hello");
 });

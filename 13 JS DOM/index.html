@@ -7,10 +7,55 @@
   </head>
   <link rel="stylesheet" href="style.css" />
   <body>
-    <button id="press-btn">Нажми меня</button>
+    <button id="press-btn" class="press-btn">Нажми меня</button>
     <button>test</button>
 
+    <a id="listener" href="https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener">addEventListener()</a>
+
     <h1 id="head-1" class="head">DOM</h1>
+
+    <button id="show-reg-form">Регистрация</button>
+    <form class="reg-form">
+      <div class="form-input">
+        <label for="firstName">Имя:</label>
+        <input type="text" name="firstName" id="firstName" />
+        <span class="error" id="firstNameError"></span>
+      </div>
+
+      <div class="form-input">
+        <label for="lastName">Фамилия:</label>
+        <input type="text" name="lastName" id="lastName" maxlength="20" placeholder="Введите фамилию" />
+      </div>
+
+      <div class="form-input">
+        <label for="login">Логин:</label>
+        <input type="text" name="login" id="login" placeholder="Только латиница, не менее трех символов" size="40" />
+      </div>
+
+      <div class="form-input">
+        <label for="email">Адрес электронной почты:</label>
+        <input type="email" name="email" id="email" />
+      </div>
+
+      <div class="form-input">
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" id="password" placeholder="Не менее восьми произвольных символов" size="40" />
+      </div>
+
+      <div class="form-input">
+        <label for="avatar">Аватар:</label>
+        <input type="file" name="avatar" id="avatar" />
+      </div>
+
+      <div class="form-input">
+        <label for="birth-date">Дата рождения:</label>
+        <input type="date" name="birth-date" id="birth-date" value="2023-10-19" />
+      </div>
+
+      <div>
+        <input type="submit" value="Зарегистрироваться" />
+      </div>
+    </form>
 
     <p id="par-1">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, voluptate? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -29,6 +74,16 @@
         alt="worker-2"
       />
     </div>
+
+    <!-- список фруктов -->
+    <!-- <ol id="fruits">
+      <li>Киви</li>
+      <li>Ананас</li>
+      <li>Кокос</li>
+    </ol> -->
+
+    <button id="add-to-list">Добавить фрукт</button>
+    <ol id="fruits"></ol>
 
     <!-- users - контейнер для ВСЕХ пользователей -->
     <div class="users">
@@ -73,49 +128,6 @@
       </div>
       <div class="user user-3">Hello</div>
     </div>
-
-    <h2>Форма регистрации</h2>
-    <form class="reg-form">
-      <div class="form-input">
-        <label for="firstName">Имя:</label>
-        <input type="text" name="firstName" id="firstName" />
-        <span class="error" id="firstNameError"></span>
-      </div>
-
-      <div class="form-input">
-        <label for="lastName">Фамилия:</label>
-        <input type="text" name="lastName" id="lastName" maxlength="20" placeholder="Введите фамилию" />
-      </div>
-
-      <div class="form-input">
-        <label for="login">Логин:</label>
-        <input type="text" name="login" id="login" placeholder="Только латиница, не менее трех символов" size="40" />
-      </div>
-
-      <div class="form-input">
-        <label for="email">Адрес электронной почты:</label>
-        <input type="email" name="email" id="email" />
-      </div>
-
-      <div class="form-input">
-        <label for="password">Пароль:</label>
-        <input type="password" name="password" id="password" placeholder="Не менее восьми произвольных символов" size="40" />
-      </div>
-
-      <div class="form-input">
-        <label for="avatar">Аватар:</label>
-        <input type="file" name="avatar" id="avatar" />
-      </div>
-
-      <div class="form-input">
-        <label for="birth-date">Дата рождения:</label>
-        <input type="date" name="birth-date" id="birth-date" value="2023-10-19" />
-      </div>
-
-      <div>
-        <input type="submit" value="Зарегистрироваться" />
-      </div>
-    </form>
 
     <script src="script.js"></script>
   </body>
