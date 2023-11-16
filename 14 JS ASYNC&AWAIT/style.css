@@ -1,0 +1,29 @@
+.countries {
+    max-width: 1200px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.countries .country {
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+.countries .country span {
+    font-weight: bold;
+    color: brown;
+}
+
+.countries .country .country-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.countries .country .country-img img {
+    width: 45%;
+}
