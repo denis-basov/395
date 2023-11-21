@@ -221,7 +221,7 @@ echo '<div class="cart">';
     }
 echo '</div>';*/
 
-d($students);
+//d($students);
 ?>
 <!doctype html>
 <html lang="en">
@@ -230,28 +230,37 @@ d($students);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Вывод массимов в документ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!-- $pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];   -->
-    <div class="pets">
-        <?php foreach($pets as $pet): ?>
-            <span><?=strtoupper($pet)?></span>
-        <?php endforeach; ?>
-    </div>
+<!--    <div class="pets">-->
+<!--        --><?php //foreach($pets as $pet): ?>
+<!--            <span>--><?//=strtoupper($pet)?><!--</span>-->
+<!--        --><?php //endforeach; ?>
+<!--    </div>-->
 
     <div class="students">
-        <?php foreach ($students as $student):?>
-            <div class="student">
-                <img src="<?=$student['avatar']?>" width="300" alt="<?=$student['firstName'].' '.$student['lastName']?>">
+        <?php foreach ($students as $key => $student):?>
+            <div class="student student-<?=$key+1?>">
+                <img src="<?=$student['avatar']?>" alt="<?=$student['firstName'].' '.$student['lastName']?>">
                 <h3><?=$student['firstName']?> <?=$student['lastName']?></h3>
                 <p>Возраст: <?=$student['age']?></p>
                 <p>Количество детей: <?=$student['childCount'] ?? 0?></p>
-                <p>Телефоны:
+                <p class="phones">Телефоны:
                 <?php foreach ($student['phones'] as $phone):?>
                     <span><?=$phone?></span>
                 <?php endforeach;?>
                 </p>
+                <div class="address">
+                    <h4>Адрес:</h4>
+                    <ul>
+                        <li>Город: <?=$student['address']['city']?></li>
+                        <li>Улица: <?=$student['address']['street']?></li>
+                        <li>Дом: <?=$student['address']['houseNumber']?></li>
+                    </ul>
+                </div>
             </div>
         <?php endforeach;?>
     </div>

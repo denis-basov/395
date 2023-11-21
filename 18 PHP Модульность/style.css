@@ -1,0 +1,29 @@
+header, .main-page, footer, .news-page, .shop-page{
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 30px;
+    background-color: #c6f4ff;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-page{
+    background-color: darkseagreen;
+}
+
+footer{
+    background-color: darksalmon;
+}
+
+.news-page{
+    background-color: #b2ef9b;
+}
+
+.shop-page{
+    background-color: #b2ef9b;
+}

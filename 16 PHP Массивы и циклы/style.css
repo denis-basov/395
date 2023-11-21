@@ -1,0 +1,43 @@
+.students{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: oldlace;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-size: 20px;
+}
+
+.students .student{
+    padding: 15px;
+    background-color: #cfecfa;
+}
+
+.students .student img{
+    width: 100%;
+}
+
+/*.students .student .phones{*/
+/*    line-height: 200%;*/
+/*}*/
+
+.students .student .phones span{
+    display: block;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #75a1ac;
+}
+
+.students .student .address{
+    background-color: #eae1bc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.students .student .address ul{
+    list-style: none;
+    padding-left: 20px;
+}
