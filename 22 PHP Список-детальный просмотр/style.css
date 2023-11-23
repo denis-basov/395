@@ -1,0 +1,36 @@
+/* стили для списка авто */
+.cars-list{
+    max-width: 1000px;
+    padding: 20px;
+    background-color: aliceblue;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.cars-list .car{
+    padding: 15px;
+    background-color: #bef0fa;
+}
+
+.cars-list .car img{
+    width: 100%;
+}
+
+/* стили для детального просмотра */
+.car-item{
+    max-width: 1000px;
+    background-color: aliceblue;
+    padding: 30px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.car-item img{
+    width: 100%;
+}

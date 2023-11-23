@@ -1,0 +1,18 @@
+form{
+    max-width: 800px;
+    background-color: #f8cab8;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.user{
+    max-width: 800px;
+    padding: 20px;
+    background-color: darkseagreen;
+}
+.user img{
+    width: 100%;
+}
