@@ -1,0 +1,26 @@
+.news-list{
+    max-width: 1000px;
+    padding: 30px;
+    background-color: #fcd8cb;
+    margin: 0 auto;
+}
+.news-list .news{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #ac8484;
+}
+
+.news-list .sport-news{
+    background-color: #e1fbe1;
+}
+
+.news-list .space-news{
+    background-color: #bec3ee;
+    display: inline-block;
+    max-width: 45%;
+}
+
+.news-list .science-news{
+    background-color: #ebb4ec;
+}

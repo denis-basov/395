@@ -1,0 +1,23 @@
+.dogs{
+    max-width: 1200px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: aliceblue;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dogs .dog{
+    background-color: darkseagreen;
+    padding: 15px;
+}
+
+.dogs .race-dog{
+    background-color: darksalmon;
+}
+
+.dogs .expo-dog{
+    background-color: #7a9fe9;
+}
