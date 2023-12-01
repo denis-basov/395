@@ -1,0 +1,10 @@
+.enter-admin-form{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ccfbcc;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}

@@ -1,0 +1,12 @@
+.books{
+    max-width: 1000px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.books .book{
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fad7c7;
+}
