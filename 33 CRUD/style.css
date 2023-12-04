@@ -33,3 +33,35 @@
 .nav a:hover{
     color: orange;
 }
+
+.authors-show{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: oldlace;
+    font-size: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.authors-show .author{
+    background-color: #fff8ca;
+    padding: 20px;
+}
+
+.authors-show .author img{
+    width: 100%;
+}
+
+.add-author{
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: aliceblue;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
