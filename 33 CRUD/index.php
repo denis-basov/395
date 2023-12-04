@@ -13,8 +13,35 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){// если отправлена фо�
     require 'DBConnect.php';
     $pdo = DBConnect::getConnection();// получаем соединение с БД
 
-    print_r($_POST);
+    //print_r($_POST);
 
+    // 1 получаем логин и пароль
+    $inputLogin = htmlspecialchars(trim($_POST['login']));
+    $inputPassword = htmlspecialchars(trim($_POST['password']));
+
+    // 2 отправляем запрос к БД для получения логина и пароля по введенному логину
+    $query = "SELECT id, login, password
+                FROM admins
+                WHERE login = ?;";
+    $statement = $pdo->prepare($query);// 1. подготовка запроса
+    $statement->execute([$inputLogin]);// 2. выполнение запроса
+    $adminData = $statement->fetch(); // 3. получаем данные админа из БД / false
+
+    //var_dump($adminData);
+    if($adminData){ // если введен верный логин
+        if($adminData['password'] === $inputPassword){// проверяем пароль
+            // если логин и пароль верны
+            session_start();// начинаем сессию
+            $_SESSION['admin'] = true;// добавляем в сессию инфу о том, что админ авторизован
+
+            header('Location: admin.php');// перенаправляем админа в зону редактирования данных
+
+        }else{
+            $errorMsg = '<h2>Неверные данные</h2>';
+        }
+    }else{ // если логин не найден в БД, выведем ошибку
+        $errorMsg = '<h2>Неверные данные</h2>';
+    }
 }
 
 ?>
@@ -42,6 +69,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){// если отправлена фо�
 
         <div class="input-data">
             <input type="submit" value="Войти">
+        </div>
+
+        <div>
+            <span class="error-msg"><?=$errorMsg ?? ''?></span>
         </div>
     </form>
 </body>

@@ -8,3 +8,28 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+
+.error-msg{
+    color: red;
+}
+
+.nav{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: aliceblue;
+
+    display: grid;
+    gap: 10px;
+}
+
+.nav a{
+    color: indigo;
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+    transition: all 0.3s;
+}
+
+.nav a:hover{
+    color: orange;
+}

@@ -3,7 +3,7 @@
 class DBConnect
 {
     // статические свойства
-    private static $dbName = '395_books';
+    private static $dbName = '395_ashion';
     private static $dbHost = 'localhost';
     private static $dbLogin = 'root';
     private static $dbPassword = '';
