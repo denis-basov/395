@@ -1,6 +1,6 @@
 <!-- шаблон (view) страницы блога-->
 <?php
-DBConnect::d($newsList);
+//DBConnect::d($newsList);
 
     require 'components/header.php';
 ?>
@@ -28,12 +28,15 @@ DBConnect::d($newsList);
             <?php foreach ($newsList as $newsItem):?>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-9.jpg"></div>
+                        <a href="blog-details.php?newsId=<?=$newsItem['id']?>">
+                            <div class="blog__item__pic set-bg" data-setbg="<?=$newsItem['image']?>"></div>
+                        </a>
+
                         <div class="blog__item__text">
-                            <h6><a href="#"><?=$newsItem['title']?></a></h6>
+                            <h6><a href="blog-details.php?newsId=<?=$newsItem['id']?>"><?=$newsItem['title']?></a></h6>
                             <ul>
-                                <li>by <span>Ema Timahe</span></li>
-                                <li>Seb 17, 2019</li>
+                                <li><span><?=$newsItem['first_name']?> <?=$newsItem['last_name']?></span></li>
+                                <li><?=$newsItem['add_date']?></li>
                             </ul>
                         </div>
                     </div>
@@ -41,7 +44,7 @@ DBConnect::d($newsList);
             <?php endforeach;?>
 
 <!--            <div class="col-lg-12 text-center">-->
-<!--                <a href="#" class="primary-btn load-btn">Load more posts</a>-->
+<!--                <a href="#" class="primary-btn load-btn">Ещё новости</a>-->
 <!--            </div>-->
         </div>
     </div>

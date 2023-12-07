@@ -85,6 +85,7 @@
                             </ul>
                         </li>
                         <li><a href="blog.php">Блог</a></li>
+                        <li><a href="blog-js.php">Блог JS</a></li>
                         <li><a href="contact.php">Контакты</a></li>
                     </ul>
                 </nav>
