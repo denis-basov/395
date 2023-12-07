@@ -1,5 +1,7 @@
 <!-- шаблон (view) страницы блога-->
 <?php
+DBConnect::d($newsList);
+
     require 'components/header.php';
 ?>
 
@@ -23,72 +25,24 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-9.jpg"></div>
-                    <div class="blog__item__text">
-                        <h6><a href="#">CMT Awards 2019 Red Carpet Arrivals Carrie Underwood, Sheryl...</a></h6>
-                        <ul>
-                            <li>by <span>Ema Timahe</span></li>
-                            <li>Seb 17, 2019</li>
-                        </ul>
+            <?php foreach ($newsList as $newsItem):?>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-9.jpg"></div>
+                        <div class="blog__item__text">
+                            <h6><a href="#"><?=$newsItem['title']?></a></h6>
+                            <ul>
+                                <li>by <span>Ema Timahe</span></li>
+                                <li>Seb 17, 2019</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach;?>
 
-
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-9.jpg"></div>
-                    <div class="blog__item__text">
-                        <h6><a href="#">CMT Awards 2019 Red Carpet Arrivals Carrie Underwood, Sheryl...</a></h6>
-                        <ul>
-                            <li>by <span>Ema Timahe</span></li>
-                            <li>Seb 17, 2019</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-9.jpg"></div>
-                    <div class="blog__item__text">
-                        <h6><a href="#">CMT Awards 2019 Red Carpet Arrivals Carrie Underwood, Sheryl...</a></h6>
-                        <ul>
-                            <li>by <span>Ema Timahe</span></li>
-                            <li>Seb 17, 2019</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-9.jpg"></div>
-                    <div class="blog__item__text">
-                        <h6><a href="#">CMT Awards 2019 Red Carpet Arrivals Carrie Underwood, Sheryl...</a></h6>
-                        <ul>
-                            <li>by <span>Ema Timahe</span></li>
-                            <li>Seb 17, 2019</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-9.jpg"></div>
-                    <div class="blog__item__text">
-                        <h6><a href="#">CMT Awards 2019 Red Carpet Arrivals Carrie Underwood, Sheryl...</a></h6>
-                        <ul>
-                            <li>by <span>Ema Timahe</span></li>
-                            <li>Seb 17, 2019</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12 text-center">
-                <a href="#" class="primary-btn load-btn">Load more posts</a>
-            </div>
+<!--            <div class="col-lg-12 text-center">-->
+<!--                <a href="#" class="primary-btn load-btn">Load more posts</a>-->
+<!--            </div>-->
         </div>
     </div>
 </section>
