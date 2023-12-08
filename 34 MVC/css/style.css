@@ -2316,6 +2316,10 @@ ol {
 	text-align: center;
 	margin-bottom: 50px;
 }
+h3.coupon__link{
+	font-size: 25px;
+	font-weight: 500;
+}
 
 .coupon__link a {
 	font-size: 14px;
@@ -2961,6 +2965,7 @@ ol {
 
 .blog__comment__item__pic img {
 	border-radius: 50%;
+	width: 100px;
 }
 
 .blog__comment__item__text {

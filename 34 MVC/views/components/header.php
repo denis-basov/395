@@ -93,8 +93,8 @@
             <div class="col-lg-3">
                 <div class="header__right">
                     <div class="header__right__auth">
-                        <a href="#">Login</a>
-                        <a href="#">Register</a>
+                        <a href="enter.php">Вход</a>
+                        <a href="registration.php">Регистрация</a>
                     </div>
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>
