@@ -32,20 +32,20 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="checkout__form__input">
-                                <p><span>*</span>Имя: <span></span></p>
-                                <input type="text" name="first_name" placeholder="Только кириллица"/>
+                                <p><span>*</span>Имя: <span class="error"><?=$errors['first_name'] ?? ''?></span></p>
+                                <input type="text" name="first_name" placeholder="Только кириллица" value="<?=$input['first_name'] ?? ''?>"/>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="checkout__form__input">
-                                <p>Фамилия <span>*</span></p>
-                                <input type="text" name="last_name" placeholder="Только кириллица"/>
+                                <p><span>*</span>Фамилия: <span class="error"><?=$errors['last_name'] ?? ''?></span></p>
+                                <input type="text" name="last_name" placeholder="Только кириллица" value="<?=$input['last_name'] ?? ''?>"/>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="checkout__form__input">
-                                <p>Логин <span>*</span></p>
-                                <input type="text" name="login" placeholder="От трех символов латиницы и цифр, первый - буква"/>
+                                <p><span>*</span>Логин: <span class="error"><?=$errors['login'] ?? ''?></span></p>
+                                <input type="text" name="login" placeholder="От трех символов латиницы и цифр, первый - буква" value="<?=$input['login'] ?? ''?>"/>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
