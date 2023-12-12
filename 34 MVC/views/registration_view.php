@@ -10,7 +10,7 @@
             <div class="col-lg-12">
                 <div class="breadcrumb__links">
                     <a href="/"><i class="fa fa-home"></i> Домой</a>
-                    <span>Регистрация</span>
+                    <span><?=$title ?? ''?></span>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
 </div>
 <!-- Breadcrumb End -->
 
-<!-- Checkout Section Begin -->
+<!-- Registration Section Begin -->
 <section class="checkout spad">
     <div class="container">
         <div class="row">
@@ -48,21 +48,28 @@
                                 <input type="text" name="login" placeholder="От трех символов латиницы и цифр, первый - буква" value="<?=$input['login'] ?? ''?>"/>
                             </div>
                         </div>
+
+                        <!-- емейл -->
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="checkout__form__input">
-                                <p>Электронная почта <span>*</span></p>
-                                <input type="email" name="email" placeholder="example@test.com"/>
+                                <p><span>*</span>Электронная почта <span class="error"><?=$errors['email'] ?? ''?></span></p>
+                                <input type="email" name="email" placeholder="example@test.com" value="<?=$input['email'] ?? ''?>"/>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+
+                        <!-- пароль -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
                             <div class="checkout__form__input">
-                                <p>Пароль <span>*</span></p>
-                                <input type="password" name="password" placeholder="От 8 символов"/>
+                                <p><span>*</span>Пароль <span class="error"><?=$errors['password'] ?? ''?></span></p>
+                                <input class="mb-1" type="password" name="password" placeholder="От 8 символов" value="<?=$input['password'] ?? ''?>"/>
+                                <button id="show-password">Показать пароль</button>
                             </div>
                         </div>
+
+                        <!-- аватар -->
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="checkout__form__input">
-                                <p>Фото профиля <span>*</span></p>
+                                <p><span>*</span>Фото профиля <span class="error"><?=$errors['avatar'] ?? ''?></span></p>
                                 <input type="file" name="avatar"/>
                             </div>
                         </div>
@@ -73,7 +80,7 @@
         </form>
     </div>
 </section>
-<!-- Checkout Section End -->
+<!-- Registration Section End -->
 
 
 <!-- Instagram Begin -->

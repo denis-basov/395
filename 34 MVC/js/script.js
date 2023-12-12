@@ -4,7 +4,6 @@
 (function (){
     let countNewsItems = null;// кол-во новостей
 
-
     let newsContainer = document.querySelector('#news-container');// контейнер для новостей
     let moreNewsBtn = document.querySelector('#more-news');// кнопка для подгрузки
 
@@ -69,6 +68,35 @@
         start += limit;// увеличиваем строку начала выбора на значение кол-ва новостей в выборке
         getPosts();
 
+    });
+
+})();
+
+// IIFE
+/**
+ * показ пароля
+ */
+(function (){
+    let showPasswordBtn = document.getElementById('show-password');
+    if(!showPasswordBtn)return;// если кнопки нет, выходим
+
+    let passwordInput = showPasswordBtn.previousElementSibling;// получаем элемент с паролем
+    if(!passwordInput)return;
+
+
+    // при клике на кнопку показываем пароль
+    showPasswordBtn.addEventListener('click', function(event){
+        event.preventDefault();// отменяем отправку формы
+
+        // если тип поля - пароль
+        if(passwordInput.type === 'password'){
+            // меняем на type="text"
+            passwordInput.type = 'text';
+            showPasswordBtn.textContent = 'Скрыть пароль';
+        }else{
+            passwordInput.type = 'password';
+            showPasswordBtn.textContent = 'Показать пароль';
+        }
     });
 
 })();

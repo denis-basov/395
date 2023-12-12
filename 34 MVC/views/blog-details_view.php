@@ -76,7 +76,12 @@
                             <h5>Комментариев нет</h5>
                         <?php endif;?>
 
-                        <a href="#" class="leave-btn">Оставить комментарий</a>
+                        <?php if(isset($_SESSION['userId'])):?>
+                            <a href="#" class="leave-btn">Оставить комментарий</a>
+                        <?php else:?>
+                            <a href="registration.php" class="leave-btn">Для добавления комментария авторизуйтесь</a>
+                        <?php endif;?>
+
                         <?php foreach($comments as $comment):?>
                             <div class="blog__comment__item">
                                 <div class="blog__comment__item__pic">

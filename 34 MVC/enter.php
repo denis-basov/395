@@ -1,4 +1,65 @@
 <?php
+// контроллер страницы входа
+$title = 'Войти';
+
+require 'models/Users.php';
+require 'core/SignIn.php';
+
+// если отправлена форма регистрации
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    list($errors, $input) = SignIn::validateForm();
+
+    if($errors){
+        //require 'views/registration_view.php';
+    }else{
+        //SignIn::processForm($input);
+    }
+}else{
+    require 'views/enter_view.php';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * основы регулярных выражений
@@ -15,11 +76,11 @@
  * {n} - предыдущий символ должен повторяться n раз
  * . - один любой символ
  */
-$regExp = "/^[a-z][a-z0-9]{2,}$/i";
-$str = 'r4';
-
-if(preg_match($regExp, $str)){
-    echo '<h2>Строка соответствует регулярному выражению</h2>';
-}else{
-    echo '<h2>Строка НЕ соответствует регулярному выражению</h2>';
-}
+//$regExp = "/^[a-z][a-z0-9]{2,}$/i";
+//$str = 'r4';
+//
+//if(preg_match($regExp, $str)){
+//    echo '<h2>Строка соответствует регулярному выражению</h2>';
+//}else{
+//    echo '<h2>Строка НЕ соответствует регулярному выражению</h2>';
+//}

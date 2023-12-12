@@ -445,6 +445,11 @@ ol {
 	margin-right: 8px;
 }
 
+.header__right__auth a img{
+	width: 40px;
+	border-radius: 50%;
+}
+
 .header__right__auth a:last-child {
 	margin-right: 0;
 }

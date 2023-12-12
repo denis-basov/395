@@ -1,5 +1,5 @@
 <?php
-// вспомогательный класс для провеки данных при регистрации, сохранение данных
+// вспомогательный класс для проверки данных при регистрации, сохранение данных
 
 class SignUp
 {
@@ -52,6 +52,55 @@ class SignUp
 
 
     /**
+     * метод для проверки емейла
+     */
+    private static function validateEmail($email){
+        $regExp = "/^.+@.+\..+$/i";
+
+        if(empty($email)){
+            return 'Введите адрес электронной почты';
+        }elseif(!preg_match($regExp, $email)){
+            return 'Адрес электронной почты введен в неверном формате';
+        }
+
+        // проверка на уникальность
+        $rows = Users::checkEmailUnique($email);
+        if($rows){
+            return 'Извините, такой емейл уже зарегистрирован';
+        }
+    }
+
+    /**
+     * метод для проверки пароля
+     */
+    private static function validatePassword($password){
+        $regExp = "/^.{8,}$/i";
+
+        if(empty($password)){
+            return 'Введите пароль';
+        }elseif(!preg_match($regExp, $password)){
+            return 'Не менее восьми произвольных символов';
+        }
+    }
+
+    /**
+     * метод для проверки картинки профиля
+     */
+    private static function validateAvatar($avatar){
+        $allowedSize = 1048576;// 1мб - разрешенный размер картинок
+        $allowedExtensions = ['image/jpeg', 'image/gif', 'image/png'];// массив разрешенных форматов
+
+        if($avatar['size'] === 0){// если картинки нет
+            return 'Выберите фото профиля';
+        }elseif($avatar['size'] > $allowedSize){
+            return 'Максимальный размер - 1Мб';
+        }elseif(!in_array($avatar['type'], $allowedExtensions)){// если элемент в массиве НЕ найден
+            return 'Разрешены форматы картинок только jpeg, gif, png';
+        }
+    }
+
+
+    /**
      * метод для проверки данных, полученных при регистрации
      */
     public static function validateForm(){
@@ -93,8 +142,69 @@ class SignUp
              $errors['login'] = $loginError;
          }
 
+        /**
+         * проверка емейла
+         */
+         $emailError = self::validateEmail($input['email']);
+         if($emailError){
+             $errors['email'] = $emailError;
+         }
+
+        /**
+         * проверка пароля
+         */
+         $passwordError = self::validatePassword($input['password']);
+         if($passwordError){
+             $errors['password'] = $passwordError;
+         }
+
+        /**
+         * проверка аватара
+         */
+         $avatarError = self::validateAvatar($input['avatar']);
+         if($avatarError){
+             $errors['avatar'] = $avatarError;
+         }
+
         // возвращаем массивы с ошибками и данными клиента
         return [$errors, $input];
+    } // validateForm()
+
+    /**
+     * метод для сохранения аватара
+     */
+    private static function saveAvatar($avatar){
+        // создаем путь для перемещения картинки
+        $avatarPath = 'template/images/users/'.time().'_'.$avatar['name'];
+
+        // перемещаем картинку
+        move_uploaded_file($avatar['tmp_name'], $avatarPath);
+
+        return $avatarPath;
     }
 
-}
+    /**
+     * метод для сохранения данных в БД, сохранения картинки, запись данных в сессию
+     */
+    public static function processForm($input){
+        // сохраняем картинку
+        $input['avatar'] = self::saveAvatar($input['avatar']);
+
+        // шифрование пароля
+        $input['password'] = password_hash($input['password'], PASSWORD_DEFAULT);
+
+        // сохранение данных в БД
+        $input['userId'] = Users::addNewUser($input);
+
+        // запись данных сохраненного пользователя в сессию
+        session_start();
+        $_SESSION['userId'] = $input['userId'];
+        $_SESSION['login'] = $input['login'];
+        $_SESSION['firstName'] = $input['first_name'];
+        $_SESSION['avatar'] = $input['avatar'];
+
+        // перенаправляем на главную
+        header('Location: /');
+    }
+
+} // SignUp
