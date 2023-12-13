@@ -72,4 +72,26 @@ class SignIn
 
         return [$errors, $input];
     }
+
+    /**
+     * метод при успешной проверке данных при входе
+     */
+    public static function processForm($input){
+
+        // получаем данные о пользователе для записи в сессию
+        $userInfo = Users::getUserInfo($input['login']);
+        //DBConnect::d($userInfo);
+
+        // запись данных пользователя в сессию
+        session_start();
+        $_SESSION['userId'] = $userInfo['id'];
+        $_SESSION['login'] = $userInfo['login'];
+        $_SESSION['firstName'] = $userInfo['first_name'];
+        $_SESSION['avatar'] = $userInfo['image'];
+
+        // на главную
+        header('Location: /');
+    }
+
+
 }

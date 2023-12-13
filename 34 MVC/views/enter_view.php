@@ -43,8 +43,9 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
                             <div class="checkout__form__input">
                                 <p><span>*</span>Пароль <span class="error"><?=$errors['password'] ?? ''?></span></p>
-                                <input class="mb-1" type="password" name="password" placeholder="От 8 символов" value="<?=$input['password'] ?? ''?>"/>
+                                <input class="mb-1" type="password" name="password" placeholder="От 8 символов"/>
                                 <button id="show-password">Показать пароль</button>
+                                <a href="reset-password.php">Забыли пароль?</a>
                             </div>
                         </div>
 

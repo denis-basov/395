@@ -38,7 +38,7 @@
                                     </a>
                                 </li>
                                 <li><?=substr($newsItem['add_date'], 10, 6)?></li>
-                                <li>39 Comments</li>
+                                <li>Комментариев: <?=count($comments)?></li>
                             </ul>
                         </div>
                     </div>
@@ -70,18 +70,17 @@
                     </div>
 
                     <div class="blog__details__comment">
-                        <?php if(count($comments)):?>
-                            <h5>Комментариев: <?=count($comments)?></h5>
-                        <?php else:?>
-                            <h5>Комментариев нет</h5>
-                        <?php endif;?>
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <?php if(count($comments)):?>
+                                    <h5>Комментариев: <?=count($comments)?></h5>
+                                <?php else:?>
+                                    <h5>Комментариев нет</h5>
+                                <?php endif;?>
+                            </div>
+                        </div>
 
-                        <?php if(isset($_SESSION['userId'])):?>
-                            <a href="#" class="leave-btn">Оставить комментарий</a>
-                        <?php else:?>
-                            <a href="registration.php" class="leave-btn">Для добавления комментария авторизуйтесь</a>
-                        <?php endif;?>
-
+                    </div>
                         <?php foreach($comments as $comment):?>
                             <div class="blog__comment__item">
                                 <div class="blog__comment__item__pic">
@@ -89,7 +88,7 @@
                                 </div>
                                 <div class="blog__comment__item__text">
                                     <h6><?=$comment['first_name']?> <?=$comment['last_name']?></h6>
-                                    <p><?=$comment['comment']?></p>
+                                    <p><?=str_replace("\r\n", '</p><p>', $comment['comment'])?></p>
                                     <ul>
                                         <li><i class="fa fa-clock-o"></i> <?=$comment['add_date']?></li>
                                         <li><i class="fa fa-heart-o"></i> 12</li>
@@ -99,7 +98,32 @@
                             </div>
                         <?php endforeach;?>
                     </div>
+
+                <div class="col-lg-12">
+                    <?php if(isset($_SESSION['userId'])):?>
+                        <p class="leave-btn">Оставить комментарий</p>
+                        <form class="checkout__form" method="POST">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="checkout__form__input">
+                                                <p><span>*</span>Введите текст комментария: <span id="error" class="error"></span></p>
+                                                <textarea id="news-comment" name="news-comment" cols="85" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <button id="add-comment-btn" type="submit" class="site-btn">Добавить</button>
+                                </div>
+                        </form>
+                    <?php else:?>
+                        <a href="registration.php" class="leave-btn">Для добавления комментария авторизуйтесь</a>
+                    <?php endif;?>
                 </div>
+                </div>
+
             </div>
             <div class="col-lg-4 col-md-4">
                 <div class="blog__sidebar">

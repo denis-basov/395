@@ -100,3 +100,31 @@
     });
 
 })();
+
+/**
+ * проверка комментария
+ */
+(function (){
+
+    let newsСomment = document.querySelector('#news-comment');
+    let spanError = document.querySelector('#error');
+    let addCommentBtn = document.querySelector('#add-comment-btn');
+
+    if(!newsСomment || !spanError || !addCommentBtn)return;
+
+    // при покидании фокуса у поля для ввода комметария
+    newsСomment.addEventListener('blur', function(){
+        // если длина комментария менее 10 знаков
+        if(newsСomment.value.length < 10){
+            addCommentBtn.disabled = true;
+            addCommentBtn.style.background = '#583535';
+            spanError.textContent = 'Комментарий должен быть не короче 10 символов';
+        }else{
+            addCommentBtn.disabled = false;
+            addCommentBtn.style.background = '#ca1515';
+            spanError.textContent = '';
+        }
+    })
+
+
+})();

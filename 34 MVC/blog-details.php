@@ -21,8 +21,25 @@ $categoryList = Category::getCategoryList();
 $comments = Comments::getCommentsByNewsId($id);
 //DBConnect::d($comments);
 
+// если отправлена форма на добавление комментария
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    session_start();
+//    DBConnect::d($_POST);
+//    DBConnect::d(['newsId' => $id]);
+//    DBConnect::d(['userId' => $_SESSION['userId']]);
 
-require 'views/blog-details_view.php';
+    $comment = htmlspecialchars(trim($_POST['news-comment']));
+
+    Comments::addNewComment($comment, $id, $_SESSION['userId']);
+
+    header("Location: blog-details.php?newsId=$id");
+
+}else{
+    require 'views/blog-details_view.php';
+}
+
+
+
 
 
 

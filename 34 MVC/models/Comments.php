@@ -20,4 +20,31 @@ class Comments
         return $pdo->query($query)->fetchAll();
     }
 
+    /**
+     * добавление нового комментария
+     */
+    public static function addNewComment($comment, $newsId, $userId){
+        $pdo = DBConnect::getConnection();
+
+        $query = "INSERT INTO comments(comment, news_id, user_id)
+                        VALUES(?,?,?);";
+        $statement = $pdo->prepare($query);
+        $statement->execute([$comment, $newsId, $userId]);
+    }
+
+    /**
+     * получение списка комментариев по ID пользователя
+     */
+    public static function getCommentsByUserId($id){
+        $pdo = DBConnect::getConnection();
+
+        // comment, news_id, add_date, title
+        $query = "SELECT comment, news_id, comments.add_date, title AS news_title
+                    FROM comments, news
+                    WHERE news_id = news.id
+                    AND user_id = $id
+                    AND approved = 1;";
+        return $pdo->query($query)->fetchAll();
+    }
+
 }

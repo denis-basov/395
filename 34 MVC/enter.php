@@ -8,11 +8,13 @@ require 'core/SignIn.php';
 // если отправлена форма регистрации
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     list($errors, $input) = SignIn::validateForm();
+//    DBConnect::d($errors);
+//    DBConnect::d($input);
 
     if($errors){
-        //require 'views/registration_view.php';
+        require 'views/enter_view.php';
     }else{
-        //SignIn::processForm($input);
+        SignIn::processForm($input);
     }
 }else{
     require 'views/enter_view.php';

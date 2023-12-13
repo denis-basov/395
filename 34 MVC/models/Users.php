@@ -64,4 +64,17 @@ class Users
     }
 
 
+    /**
+     * получение данных о пользователе
+     */
+    public static function getUserInfo($login){
+        $pdo = DBConnect::getConnection();
+
+        $query = "SELECT id, login, first_name, last_name, email, image, add_date, favourite
+                    FROM users
+                    WHERE login = ?;";
+        $statement = $pdo->prepare($query);
+        $statement->execute([$login]);
+        return $statement->fetch();
+    }
 }

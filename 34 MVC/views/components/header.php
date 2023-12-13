@@ -1,7 +1,10 @@
 <?php
-    session_start();
+    // если сессия не начата
+    if(!isset($_SESSION)){
+        session_start();
+    }
 
-    print_r($_SESSION);
+    //print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
